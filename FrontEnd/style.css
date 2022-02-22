@@ -1,0 +1,308 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+:root {
+  --placholder-color: pink;
+}
+
+body{
+    height:100vh;
+    background-color: #38324e;
+}
+
+.heading{
+    position: fixed;
+    width: 100%;
+    height: 15vh;
+    background-color: #736c95;
+    border-radius: 0 0 30px 30px;
+    display: grid;
+    place-items: center;
+    color: snow;
+    z-index: 2;
+}
+.heading-placeholder{
+    height: 15vh;
+}
+
+.configs {
+  text-align: left;
+  margin: 5px;
+}
+
+.configs p span {
+  color: yellow;
+}
+  .column {
+    display: grid;
+    place-items: center;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 30px;
+    margin:1%;
+    float: left;
+    width: 23%;
+    height: 70vh;
+    background-color: #403a60;
+  }
+  
+.flexrow {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.btnflexrow {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#btnOut, #btnIn {
+  margin: auto;
+  background: rgb(67,197,233);
+  background: linear-gradient(149deg, rgba(67,197,233,1) 22%, rgba(51,201,174,1) 85%);
+  width: 25%;
+}
+
+h2 {
+    margin: auto;
+}
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  form {
+    width: 100%;
+  }
+  .device-ip {
+    height: 5vh;
+    width: 80%;
+    border-radius: 1vh;
+    background-color: #736c95;
+    margin: 1vh;
+    border: none;
+    outline: none;
+  }
+
+
+/* placeholder color */
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: var(--placholder-color);
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: var(--placholder-color);
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: var(--placholder-color);
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: var(--placholder-color);
+}
+/*  */
+
+  .btn {
+    height: 5vh;
+    width: 50%;
+    background: rgb(67,197,233);
+    background: linear-gradient(149deg, rgba(67,197,233,1) 22%, rgba(51,201,174,1) 85%);
+    border-radius: 5vh;
+    margin: 1vh;
+    border: none;
+    outline: none;
+    color: #38324e;
+    font-size: 20px;
+  }
+  .gateway-loc {
+    height: 5vh;
+    width: 40%;
+    border-radius: 1vh;
+    background-color: #736c95;
+    margin: 1vh;
+    border: none;
+    outline: none;
+  }
+  .row {
+    width: 100%;
+    display: flex;
+    direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .circle {
+    margin: auto;
+    width: 7vw;
+    height: 7vw;
+    border-radius: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .inner-circle {
+    display: grid;
+    place-items: center;
+    width: 5vw;
+    height: 5vw;
+    border-radius: 100%;
+    background-color: #38324e;
+  }
+
+  .rsgraph {
+    margin: auto;
+    width: 7vw;
+    display: grid;
+    place-items: center;
+  }
+  .rs-a {
+    color: #4db9e7;
+  }
+  .rs-b {
+    color: #31bca7;
+  }
+  .rs-c {
+    color: #dea730;
+  }
+
+.main-of-circolar-rotate-thingy-ring-1 {
+    background-color: #5e478d;
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    display: grid;
+    place-items: center;
+}
+
+.main-of-circolar-rotate-thingy-ring-2 {
+    background-color: #8d62d8;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display: grid;
+    place-items: center;
+}
+
+  .main-of-circolar-rotate-thingy{
+  width:100px;
+  height:100px;
+  border:5px solid #2e2e4a;
+  position:relative;
+  top:0; bottom:0; left:0;right:0;
+  margin:auto;
+  border-radius:50%;
+  background-color: #413863;
+}
+
+.circolar-rotate-thingy{
+  width:20px;
+  height:20px;
+  background:#604991;
+  border-radius:50%;
+  position:absolute;
+  top:0; bottom:0; left:0;right:0;
+  overflow:hidden;
+  margin:auto;
+  animation: circolar-rotate-thingy 6s linear infinite;
+}
+
+.big {
+  position: relative;
+  width: 100%;
+  padding-bottom: 50%;
+}
+
+.canvaStuff {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes circolar-rotate-thingy{
+  0%{
+    transform:rotate(0deg)
+              translate(-50px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-50px)
+              rotate(-360deg);
+  }
+}
+.main-of-circolar-rotate-thingy {
+  display: grid;
+  place-items: center;
+}
+
+.cir-a {
+	background: linear-gradient(-45deg, #20cfa8, #4dc4fe, #ed4580);
+	background-size: 400% 400%;
+	animation: gradient 3s ease infinite;
+}
+.cir-b {
+	background: linear-gradient(-45deg, #ed4580, #20cfa8, #4dc4fe);
+	background-size: 400% 400%;
+	animation: gradient 3s ease infinite;
+}
+.cir-c {
+	background: linear-gradient(-45deg, #4dc4fe, #ed4580, #20cfa8);
+	background-size: 400% 400%;
+	animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+ /* On screens that are 992px wide or less, go from four columns to two columns */
+ @media screen and (max-width: 992px) {
+    .column {
+      width: 48%;
+    }
+
+    .circle {
+      height: 13vw;
+      width: 13vw;
+    }
+    .inner-circle {
+      height: 9vw;
+      width: 9vw;
+    }
+  }
+
+  /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 700px) {
+    .column {
+      width: 100%;
+      height: 50vh;
+    }
+    .circle {
+      height: 20vw;
+      width: 20vw;
+    }
+    .inner-circle {
+      height: 14vw;
+      width: 14vw;
+    }
+  }
+
+  @media screen and (max-height: 600px){
+    .big {
+      visibility: hidden;
+    }
+  }

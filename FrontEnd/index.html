@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Lora Finder</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="heading">
+        <h1>Lora Local Tracking System</h1>
+    </div>
+    <div class="heading-placeholder">
+        
+    </div>
+
+    <div class="column update-gateway-location">
+
+      <div>
+
+        <input class="device-ip" type="text" id="device-ip" placeholder="Device IP: 127.0.0.1"><br>
+
+        <button class="btn" id="device-ip-btn">Submit</button>
+
+      </div> 
+
+      <div class="btnflexrow">
+        <button class="btn" id="btnOut">Outdoor</button>
+        <button class="btn" id="btnIn">Indoor</button>
+      </div>
+      
+
+      <div>
+        
+        <input class="gateway-loc" type="number" id="gax" placeholder="GatewayA X">
+        <input class="gateway-loc" type="number" id="gay" placeholder="GatewayB Y"><br>
+
+        <input class="gateway-loc" type="number" id="gbx" placeholder="GatewayB X">
+        <input class="gateway-loc" type="number" id="gby" placeholder="GatewayB Y"><br>
+
+        <input class="gateway-loc" type="number" id="gcx" placeholder="GatewayC X">
+        <input class="gateway-loc" type="number" id="gcy" placeholder="GatewayC Y"><br>
+
+        <button class="btn"  id="gateway-loc-btn">Submit</button>
+      </div> 
+    </div>
+    <div class="column your-rssi">
+      <div class="rssi-heading">
+        <h2>Received Rssi Values</h2>
+      </div>
+        <div class="flexrow">
+
+            <div class="circle cir-a">
+              <div class="inner-circle">
+                <p id="cirnum-a">0</p>
+              </div>
+            </div>
+            <div class="circle cir-b">
+              <div class="inner-circle">
+                <p id="cirnum-b">0</p>
+              </div>
+            </div>
+            <div class="circle cir-c">
+              <div class="inner-circle">
+                <p id="cirnum-c">0</p>
+              </div>
+            </div>
+
+        </div>
+        <div class="rssi-graph">
+          <div class="flexrow">
+            <div class="rsgraph rs-a">
+              <p  id="cirnum-a">Gate A</p>
+            </div>
+            <div class="rsgraph rs-b">
+              <p  id="cirnum-b">Gate B</p>
+            </div>
+            <div class="rsgraph rs-c">
+              <p  id="cirnum-b">Gate C</p>
+            </div>
+          </div>
+          <div id="big1" class="big">
+            <canvas id="myChart1" class="canvaStuff" width="0px" height="0px"></canvas>
+          </div>
+          </div>
+        </div>
+
+        
+    </div>
+    <div class="column input-device-ip">
+      <h2>Calculated Position</h2>
+      <div class="flexrow">
+        <h2>X</h2>
+        <h2>Y</h2>
+      </div>
+      <div class="row">
+        <div class="main-of-circolar-rotate-thingy">
+          <div class="main-of-circolar-rotate-thingy-ring-1">
+            <div class="main-of-circolar-rotate-thingy-ring-2">
+              <p id="loc-x">0.00</p>
+            </div>
+          </div>
+            <div class="circolar-rotate-thingy">
+            </div>
+          </div>
+          
+          <div class="main-of-circolar-rotate-thingy">
+            <div class="main-of-circolar-rotate-thingy-ring-1">
+              <div class="main-of-circolar-rotate-thingy-ring-2">
+                <p id="loc-y">0.00</p>
+              </div>
+            </div>
+              <div class="circolar-rotate-thingy">
+              </div>
+            </div>
+      </div>
+      <!--HIPI-->
+      
+
+     
+    </div>
+
+    <div class="column your-location">
+      
+      
+
+      <h2>Your location map</h2>
+      <div id="big0" class="big">
+        <canvas id="myChart0" class="canvaStuff" width="0px" height="0px"></canvas>
+      </div>
+      <div class="configs">
+        <h3>Your configuration</h3>
+        <p>Connected Device IP: <span id="device-ip-thing">None</span></p>
+        <p>Mode: <span id="location-mode">Outdoor</span></p>
+      </div>
+
+    </div>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="./script.js"></script>
+</body>
+</html>
